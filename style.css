@@ -1,0 +1,180 @@
+@charset "UTF-8";
+
+html {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+html, body {
+    height: 100%;
+}
+
+html, body, nav, header, main, aside, footer, article, section, div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    color: #000000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: grid;
+    grid-template-columns: auto 10px minmax(350px,1000px) auto;
+    grid-template-rows: min-content 100px auto 70px;
+    grid-template-areas:
+        "nav      nav    nav    nav"
+        "aside  aside main     main   "
+        "aside  aside main     main   "
+        "footer footer footer footer";
+}
+
+#meny{
+    display: none;
+}
+nav {
+    grid-area: nav;
+    position: sticky;
+    top: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display:flex;
+    flex-direction: row;
+    gap: 2rem;
+    text-align: center;
+    background-color: black;
+    justify-content: flex-start;
+}
+
+
+nav a {
+    text-decoration: none;
+    background-color: black;
+   
+}
+
+a:link           { color: white } 
+a:visited        { color: white } 
+a:hover, a:focus { color: white }  
+a:active{ 
+    background-color: grey;
+} 
+
+nav a:hover, nav a:active {
+    background-color: white;
+    color: black;
+}
+
+
+main {
+    grid-area: main;
+    background-color: white;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 100%;
+}
+
+.Rubriker{
+   
+    text-align: center;
+    font-family: inherit;
+    color:black;
+    font-size: 1.2rem
+    
+}
+#navBild{
+    max-width:350px;
+    min-width: 100px;
+    text-align: center;
+    padding-top: 10px;
+}
+#gruppanalys{
+    max-width:350px;
+    min-width: 100px;
+    text-align: center;
+    padding-top: 10px;
+}
+aside {
+    grid-area: aside;
+    background-color: gray;
+    padding: 10px;
+}
+
+footer {
+    grid-area: footer;
+    background-color:black;
+    padding: 10px;
+    color: white;
+}
+
+/* Media queries*/
+@media screen and (max-width: 700px){
+#meny{
+    display: none;
+}
+
+body {
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-columns: auto 5px minmax(350px,1000px) auto;
+    grid-template-rows: min-content 100px auto 70px;
+    grid-template-areas:
+        " main  main    main    main"
+        "nav nav main     main   "
+        "nav navmain     main   "
+        "footer footer footer footer";
+}
+aside{
+    display: none;
+}
+nav ul { 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+    height: 100%;
+    
+    }
+
+}
+
+/* Media queries*/
+@media screen and (max-width: 550px){
+    img{
+        display: none;
+    }
+    #menuicon{
+        background-image: url(../img/menuicon.png);
+        width: 24px;
+        height: 24px;
+        display: inline-block; 
+        cursor: pointer;
+        background-color: rgb(214, 206, 206);
+        
+    }
+    #meny{
+        display: none;
+    }
+    #meny ~ ul {
+        display: none;
+
+    }
+    #meny:checked ~ ul {
+        display: flex;
+
+    }
+
+    nav ul{
+        background-color: gray;
+        
+    }
+   
+}
+

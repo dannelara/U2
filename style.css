@@ -98,7 +98,9 @@ nav a:hover, nav a:active {
     color: black;
 }
 
-
+#Krav {
+    color: red;
+}
 main {
     grid-area: main;
     background-color: rgb(255, 255, 255);
@@ -106,8 +108,9 @@ main {
     padding-left: 5px;
     padding-right: 5px;
     height: 100%;
-    
-    
+    column-count: 2;
+    margin-top: 50px;
+    margin-right: 25px;
    
 }
 
@@ -137,15 +140,11 @@ img:hover{
 }
 aside {
     grid-area: aside;  
-    position: absolute;
-    top: 100px;
-    left: 10px;
     background-color: rgba(141, 223, 178, 0.884);
     border: 1px solid black;
-    width: 20em;
-    height: 139px;
     padding: 1em;
-    overflow: scroll;
+    overflow: auto;
+    
    
 }
 aside a{

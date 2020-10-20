@@ -167,6 +167,9 @@ footer {
     aside{
         display: none;
     }
+    main {
+        column-count: 1;
+    }
     nav ul { 
         display: flex;
         flex-direction: column;
@@ -192,10 +195,10 @@ body {
     grid-template-columns: auto 5px minmax(350px,1000px) auto;
     grid-template-rows: min-content 100px auto 70px;
     grid-template-areas:
-        " nav nav nav  nav"
-        "main main  main  main   "
-        "main main  main  main   "
-        "footer footer footer footer";
+        ".nav nav"
+        ".main main "
+        ".main  main"
+        ".footer footer";
 }
 aside{
     display: none;
@@ -216,7 +219,18 @@ nav ul {
     img{
         display: none;
     }
-    
+    body {
+        color: #000000;
+        font-family: Arial, Helvetica, sans-serif;
+        display: grid;
+        grid-template-columns: auto 5px minmax(350px,1000px) auto;
+        grid-template-rows: min-content 100px auto 70px;
+        grid-template-areas:
+            ".nav"
+            "main"
+            "main"
+            "footer";
+    }
     #menuicon{
         background-image: url(../img/menuicon.png);
         width: 24px;

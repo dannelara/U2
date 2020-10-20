@@ -139,6 +139,7 @@ img:hover{
     transform: scale(1.25);
 }
 aside {
+    height: 100%;
     grid-area: aside;  
     background-color: rgba(141, 223, 178, 0.884);
     border: 1px solid black;
